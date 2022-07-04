@@ -57,7 +57,7 @@ const GamePlay = ({}) => {
                 exit={{
                   opacity: 0,
                 }}
-                className="w-44 h-44 rounded-full bg-dark bg-opacity-50 flex items-center justify-center"
+                className="w-44 translate-y-4 h-44 rounded-full bg-dark bg-opacity-50 flex items-center justify-center"
               >
                 <h3 className="text-lg uppercase font-medium text-white animate-bounce">
                   Thinking...
@@ -91,7 +91,7 @@ const GamePlay = ({}) => {
               </h3>
             </div>
             {countdown.isActive ? (
-              <div className="w-44 h-44 rounded-full bg-dark bg-opacity-50 flex items-center justify-center">
+              <div className="w-44 h-44 -translate-y-4 rounded-full bg-dark bg-opacity-50 flex items-center justify-center">
                 <h3 className="text-lg uppercase font-medium text-white animate-bounce">
                   Thinking...
                 </h3>

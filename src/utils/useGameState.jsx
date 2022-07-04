@@ -78,6 +78,7 @@ export const GameProvider = ({ children }) => {
         openModal,
         closeModal,
         modalIsOpen,
+        setScore,
       }}
     >
       {children}
