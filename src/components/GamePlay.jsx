@@ -59,10 +59,9 @@ const GamePlay = ({}) => {
                 }}
                 className="w-44 h-44 rounded-full bg-dark bg-opacity-50 flex items-center justify-center"
               >
-                {/* <h3 className="text-lg uppercase font-medium text-white animate-bounce">
+                <h3 className="text-lg uppercase font-medium text-white animate-bounce">
                   Thinking...
-                </h3> */}
-                <img src="/images/try.gif" alt="science" />
+                </h3>
               </motion.div>
             ) : (
               <div
@@ -93,10 +92,9 @@ const GamePlay = ({}) => {
             </div>
             {countdown.isActive ? (
               <div className="w-44 h-44 rounded-full bg-dark bg-opacity-50 flex items-center justify-center">
-                {/* <h3 className="text-lg uppercase font-medium text-white animate-bounce">
+                <h3 className="text-lg uppercase font-medium text-white animate-bounce">
                   Thinking...
-                </h3> */}
-                <img src="/images/try.gif" alt="science" />
+                </h3>
               </div>
             ) : (
               <div
