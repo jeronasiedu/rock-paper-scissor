@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: rgba(31, 55, 86, 1);
+  background: -webkit-radial-gradient(
+    bottom,
+    rgba(31, 55, 86, 1),
+    rgba(20, 22, 57, 1)
+  );
+  background: -moz-radial-gradient(
+    bottom,
+    rgba(31, 55, 86, 1),
+    rgba(20, 22, 57, 1)
+  );
+  background: radial-gradient(to top, rgba(31, 55, 86, 1), rgba(20, 22, 57, 1));
+}
+.scissors-box_shadow {
+  box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px #ec9e0e;
+  border-color: hsl(40, 84%, 53%);
+}
+.paper-box_shadow {
+  box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px hsl(230, 89%, 62%);
+  border-color: hsl(230, 89%, 65%);
+}
+.rock-box_shadow {
+  box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px hsl(349, 70%, 56%);
+  border-color: hsl(349, 70%, 56%);
+}
+.lizard-box_shadow {
+  border-color: hsl(261, 72%, 63%);
+  box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px hsl(261, 72%, 63%);
+}
+.spock-box_shadow {
+  border-color: hsl(189, 58%, 57%);
+  box-shadow: inset 0px 8px rgba(63, 55, 55, 0.1), 0px 8px hsl(189, 58%, 57%);
+}
+
+.winner {
+  animation: winner-animation 3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    infinite alternate-reverse;
+}
+@keyframes winner-animation {
+  0% {
+    box-shadow: inset 0px 0px 0px 20px rgb(31 55 86 /80%);
+  }
+  25% {
+    box-shadow: inset 0px 0px 0px 20px rgb(31 55 86 /80%),
+      0px 0px 0px 10px rgb(31 55 86 / 80%);
+  }
+  50% {
+    box-shadow: inset 0px 0px 0px 20px rgb(31 55 86 /80%),
+      0px 0px 0px 10px rgb(31 55 86 / 80%),
+      0px 0px 0px 50px rgb(220 220 220 / 8%);
+  }
+  75% {
+    box-shadow: inset 0px 0px 0px 20px rgb(31 55 86 /80%),
+      0px 0px 0px 10px rgb(31 55 86 / 80%),
+      0px 0px 0px 50px rgb(220 220 220 / 8%),
+      0px 0px 0px 100px rgb(220 220 220 / 5%);
+  }
+  100% {
+    box-shadow: inset 0px 0px 0px 20px rgb(31 55 86 /80%),
+      0px 0px 0px 10px rgb(31 55 86 / 80%),
+      0px 0px 0px 50px rgb(220 220 220 / 8%),
+      0px 0px 0px 100px rgb(220 220 220 / 5%),
+      0px 0px 0px 150px rgb(220 220 220 / 3%);
+  }
+}
