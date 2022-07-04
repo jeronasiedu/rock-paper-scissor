@@ -6,8 +6,12 @@ export const GameProvider = ({ children }) => {
   const [currentPlayer, setCurrentPlayer] = useState("")
   const [computerChoice, setComputerChoice] = useState("")
   const [results, setResults] = useState("")
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   const [score, setScore] = useLocalStorage("rock-paper-scissors-score", 0)
+  const closeModal = () => setModalIsOpen(false)
+  const openModal = () => setModalIsOpen(true)
 
+  // GAME STARTS HERE
   const startGame = (yourChoice, houseChoice) => {
     setIsPlaying(true)
     setComputerChoice(houseChoice)
@@ -71,6 +75,9 @@ export const GameProvider = ({ children }) => {
         computerChoice,
         results,
         score,
+        openModal,
+        closeModal,
+        modalIsOpen,
       }}
     >
       {children}

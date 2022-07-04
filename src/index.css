@@ -70,3 +70,24 @@ body {
       0px 0px 0px 150px rgb(220 220 220 / 3%);
   }
 }
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(56, 55, 63, 0.361);
+  width: 100%;
+  height: 100%;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+}
+@media (max-width: 768px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+  }
+}
