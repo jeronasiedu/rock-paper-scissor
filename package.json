@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@bradgarropy/use-countdown": "^1.5.1",
+    "@fontsource/barlow-semi-condensed": "^4.5.8",
     "framer-motion": "^6.3.16",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -23,6 +24,7 @@
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.4",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vite-plugin-pwa": "^0.12.2"
   }
 }

@@ -59,14 +59,9 @@ const GamePlay = ({}) => {
                 }}
                 className="w-36 translate-y-4 h-36 rounded-full bg-dark bg-opacity-50 flex items-center justify-center"
               >
-                {/* <h3 className="text-lg uppercase font-medium text-white animate-bounce">
+                <h3 className="text-lg uppercase font-medium text-white animate-bounce">
                   Thinking...
-                </h3> */}
-                <img
-                  src="/images/thinking.gif"
-                  alt="thinking gif"
-                  className="w-[90%]"
-                />
+                </h3>
               </motion.div>
             ) : (
               <div
@@ -97,14 +92,9 @@ const GamePlay = ({}) => {
             </div>
             {countdown.isActive ? (
               <div className="w-36 h-36 -translate-y-4 rounded-full bg-dark bg-opacity-50 flex items-center justify-center">
-                {/* <h3 className="text-lg uppercase font-medium text-white animate-bounce">
+                <h3 className="text-lg uppercase font-medium text-white animate-bounce">
                   Thinking...
-                </h3> */}
-                <img
-                  src="/images/thinking.gif"
-                  alt="thinking gif"
-                  className="w-[90%]"
-                />
+                </h3>
               </div>
             ) : (
               <div

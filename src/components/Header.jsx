@@ -14,10 +14,14 @@ const Header = () => {
       <div
         className="px-6 py-4 bg-white rounded shadow-md select-none cursor-pointer   flex flex-col justify-center "
         {...bind()}
-        onClick={() => toast.success("long press to reset score")}
+        onClick={() =>
+          toast("long press to reset score", {
+            id: "prompt",
+          })
+        }
       >
         <span className="text-score text-xl uppercase font-medium ">Score</span>
-        <AnimatePresence key={score} exitBeforeEnter>
+        <AnimatePresence key={score} exitBeforeEnter initial={false}>
           <motion.h3
             initial={{
               opacity: 0,

@@ -25,9 +25,8 @@ function Player({ player }) {
   const options = ["rock", "paper", "scissors", "lizard", "spock"]
   const randomChoice = options[Math.floor(Math.random() * options.length)]
   const handleGameStart = () => {
-    if (!isPlaying) {
-      startGame(player, randomChoice)
-    } else return
+    if (isPlaying) return
+    startGame(player, randomChoice)
   }
   return (
     <motion.div
