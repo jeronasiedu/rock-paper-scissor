@@ -12,7 +12,7 @@ const Header = () => {
     <header className="flex pl-6 p-3 w-[85%] ring ring-header rounded-md max-w-xl mx-auto justify-between items-center ">
       <img src="/images/logo-bonus.svg" alt="logo" className="w-24" />
       <div
-        className="px-6 py-4 bg-white rounded shadow-md select-none cursor-pointer   flex flex-col justify-center "
+        className="flex flex-col justify-center px-6 py-4 bg-white rounded shadow-md cursor-pointer select-none "
         {...bind()}
         onClick={() =>
           toast("long press to reset score", {
@@ -20,7 +20,7 @@ const Header = () => {
           })
         }
       >
-        <span className="text-score text-xl uppercase font-medium ">Score</span>
+        <span className="text-xl font-medium uppercase text-score ">Score</span>
         <AnimatePresence key={score} exitBeforeEnter initial={false}>
           <motion.h3
             initial={{
@@ -38,7 +38,7 @@ const Header = () => {
             transition={{
               duration: 0.4,
             }}
-            className="text-5xl font-bold text-dark text-center"
+            className="text-5xl font-bold text-center text-dark"
           >
             {score}
           </motion.h3>

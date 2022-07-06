@@ -21,40 +21,44 @@ export const GameProvider = ({ children }) => {
       setResults(resultsState)
     }, 3100)
   }
-
+  const increaseScore = () => {
+    setScore(score + 1)
+  }
+  const decreaseScore = () => {
+    setScore(score - 1)
+  }
   const getWinner = (yourChoice, houseChoice) => {
     if (yourChoice === houseChoice) {
       return "drew"
     }
     if (yourChoice === "scissors" && houseChoice === "paper") {
-      setScore(score + 1)
       return "won"
     } else if (yourChoice === "paper" && houseChoice === "rock") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else if (yourChoice === "lizard" && houseChoice === "spock") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else if (yourChoice === "spock" && houseChoice === "scissors") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else if (yourChoice === "scissors" && houseChoice === "lizard") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else if (yourChoice === "paper" && houseChoice === "spock") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else if (yourChoice === "rock" && houseChoice === "scissors") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else if (yourChoice === "lizard" && houseChoice === "paper") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else if (yourChoice === "spock" && houseChoice === "rock") {
-      setScore(score + 1)
+      increaseScore()
       return "won"
     } else {
-      setScore(score - 1)
+      decreaseScore()
       return "lose"
     }
   }

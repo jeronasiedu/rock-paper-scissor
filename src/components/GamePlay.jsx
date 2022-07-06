@@ -10,6 +10,7 @@ const GamePlay = ({}) => {
     seconds: 3,
     format: "ss",
   })
+
   return (
     <>
       {isDesktop ? (
@@ -20,25 +21,25 @@ const GamePlay = ({}) => {
           animate={{
             opacity: 1,
           }}
-          className="flex items-center justify-around  gap-4 w-full"
+          className="flex items-center justify-around w-full gap-4"
         >
           <div
             className={`space-y-6  flex flex-col items-center w-48  h-48 rounded-full ${
               results === "won" && countdown.isInactive && "winner "
             }`}
           >
-            <h3 className="text-lg uppercase font-medium text-white">
+            <h3 className="text-lg font-medium text-white uppercase">
               You Picked
             </h3>
             <Player player={currentPlayer} />
           </div>
           {countdown.isInactive && (
-            <div className="space-y-6 flex flex-col items-center">
-              <h2 className="text-4xl uppercase font-medium text-white">
+            <div className="flex flex-col items-center space-y-6">
+              <h2 className="text-4xl font-medium text-white uppercase">
                 You {results}
               </h2>
               <button
-                className=" focus:outline-none animate-bounce hover:bg-slate-300 transition-colors duration-300 focus:ring uppercase font-medium text-dark bg-white rounded-md px-10 py-2"
+                className="px-10 py-2 font-medium uppercase transition-colors duration-300 bg-white rounded-md focus:outline-none animate-bounce hover:bg-slate-300 focus:ring text-dark"
                 onClick={() => replayGame()}
               >
                 play again
@@ -57,9 +58,9 @@ const GamePlay = ({}) => {
                 exit={{
                   opacity: 0,
                 }}
-                className="w-36 translate-y-4 h-36 rounded-full bg-dark bg-opacity-50 flex items-center justify-center"
+                className="flex items-center justify-center translate-y-4 bg-opacity-50 rounded-full w-36 h-36 bg-dark"
               >
-                <h3 className="text-lg uppercase font-medium text-white animate-bounce">
+                <h3 className="text-lg font-medium text-white uppercase animate-bounce">
                   Thinking...
                 </h3>
               </motion.div>
@@ -69,7 +70,7 @@ const GamePlay = ({}) => {
                   results === "lose" && "winner"
                 }`}
               >
-                <h3 className="text-lg uppercase font-medium text-white">
+                <h3 className="text-lg font-medium text-white uppercase">
                   The house picked
                 </h3>
                 <Player player={computerChoice} />
@@ -86,13 +87,13 @@ const GamePlay = ({}) => {
               }`}
             >
               <Player player={currentPlayer} />
-              <h3 className="text-lg uppercase font-medium text-white">
+              <h3 className="text-lg font-medium text-white uppercase">
                 You Picked
               </h3>
             </div>
             {countdown.isActive ? (
-              <div className="w-36 h-36 -translate-y-4 rounded-full bg-dark bg-opacity-50 flex items-center justify-center">
-                <h3 className="text-lg uppercase font-medium text-white animate-bounce">
+              <div className="flex items-center justify-center -translate-y-4 bg-opacity-50 rounded-full w-36 h-36 bg-dark">
+                <h3 className="text-lg font-medium text-white uppercase animate-bounce">
                   Thinking...
                 </h3>
               </div>
@@ -103,19 +104,19 @@ const GamePlay = ({}) => {
                 }`}
               >
                 <Player player={computerChoice} />
-                <h3 className="text-lg uppercase font-medium text-white">
+                <h3 className="text-lg font-medium text-white uppercase">
                   The house picked
                 </h3>
               </div>
             )}
           </div>
           {countdown.isInactive && (
-            <div className="space-y-4 flex flex-col items-center">
-              <h2 className="text-5xl uppercase font-medium text-white ">
+            <div className="flex flex-col items-center space-y-4">
+              <h2 className="text-5xl font-medium text-white uppercase ">
                 You {results}
               </h2>
               <button
-                className=" focus:outline-none hover:bg-slate-300 animate-bounce transition-colors duration-300 focus:ring uppercase font-medium text-dark bg-white rounded-md px-10 py-2"
+                className="px-10 py-2 font-medium uppercase transition-colors duration-300 bg-white rounded-md focus:outline-none hover:bg-slate-300 animate-bounce focus:ring text-dark"
                 onClick={() => replayGame()}
               >
                 play again
